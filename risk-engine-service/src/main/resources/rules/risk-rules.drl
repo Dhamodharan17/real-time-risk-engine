@@ -1,0 +1,17 @@
+
+import com.riskengine.model.UserEvent;
+import com.riskengine.model.RiskResult;
+
+global com.riskengine.model.RiskResult risk;
+
+dialect "mvel"
+
+rule "High Amount Login"
+when
+    $e : UserEvent(amount > 3000)
+then
+    // Use the global object 'risk'
+    risk.setUserId($e.getUserId()); 
+    risk.setRiskLevel("HIGH");
+    System.out.println("Rule fired for amount: " + $e.getAmount());
+end
