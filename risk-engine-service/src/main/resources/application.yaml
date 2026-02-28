@@ -1,0 +1,10 @@
+
+spring:
+  application:
+    name: risk-engine-service
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
