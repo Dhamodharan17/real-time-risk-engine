@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/bankservice")
 public class DroolsSampleController {
  
- @Autowired
- private DroolsService bankService;
- 
- @PostMapping("/getrate")
- public ResponseEntity<Rate> getRate(@RequestBody Participant request){
-  Rate rate = bankService.getRate(request);
-  return new ResponseEntity<>(rate, HttpStatus.OK);
- }
+   @Autowired
+   private DroolsService bankService;
+
+   @PostMapping("/getrate")
+   public ResponseEntity<Rate> getRate(@RequestBody Participant request){
+     Rate rate = bankService.getRate(request);
+     return new ResponseEntity<>(rate, HttpStatus.OK);
+   }
 
 }
