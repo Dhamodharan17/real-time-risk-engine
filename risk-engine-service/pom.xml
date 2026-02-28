@@ -41,6 +41,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--		drools-->
 		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-core</artifactId>
@@ -61,11 +62,20 @@
 			<artifactId>drools-mvel</artifactId>
 			<version>${drools.version}</version>
 		</dependency>
+
+	  <!--		swagger-->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+
+		<!--		kafka-->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
